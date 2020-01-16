@@ -18,6 +18,12 @@ pipeline {
       }
     }
 
+    stage('Report') {
+      steps {
+        cucumber '**/*.json'
+      }
+    }
+
   }
   environment {
     SIT_NAME = 'Superman'
